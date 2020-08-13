@@ -1,5 +1,4 @@
 const express = require("express");
-const port = process.env.PORT || 3001
 
 require("dotenv").config();
 const cors = require("cors");
@@ -11,6 +10,7 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 
+const port = process.env.PORT || 3001
 require("./database"); 
 
 app.use('/static', express.static(path.join(__dirname, 'public')));

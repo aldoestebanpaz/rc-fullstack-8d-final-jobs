@@ -1,9 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect(
-	//`mongodb+srv://${process.env.USER_MONGODB}:${process.env.PASS_MONGODB}@${process.env.DB_ATLAS}.mongodb.net/Cluster0?retryWrites=true&w=majority`
-	 
-	`mongodb://${process.env.DB_HOST}/${process.env.DB_NAME}`
-	 ,
+mongoose.connect(process.env.DB_ATLAS || process.env.DB_LOCAL ,
 	{
 	  // useNewUrlParser: true,
 	  // useUnifiedTopology: true,
